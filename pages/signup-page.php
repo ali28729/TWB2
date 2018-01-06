@@ -6,6 +6,7 @@ include "linkers/signup-page-css.html";
 <body>
 	<?php
 	include "pages/signup-page.html";	
+	include "pages/footer.html";
 	?>
 </body>
 
