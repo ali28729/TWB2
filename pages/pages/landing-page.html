@@ -1,0 +1,121 @@
+
+
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=1025966530878223';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+    	<div class="container">
+        	<div class="navbar-header">
+        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+            		<span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+        		</button>
+        		<a class="navbar-brand" href="link here"><img src="../assets/img/profile.png" alt="" class="navbarimg img-responsive img-circle img-raised"></a>
+        	</div>
+
+        	<div class="collapse navbar-collapse" id="navigation-example">
+        		<ul class="nav navbar-nav navbar-right">
+        			<li>
+						<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+					</li>
+    				<li>
+    					<a href="#signin">
+    						<b>
+								Sign In
+							</b>
+    					</a>
+					</li>
+					<li>
+						<a href="link here">
+							<b>
+								About
+							</b>
+						</a>
+					</li>	
+        		</ul>
+        	</div>
+    	</div>
+	</nav>
+
+
+	
+    <div class="wrapper">
+		<div id="my-slider" class="carousel slide" data-ride="carousel" data-interval="2000">
+			<ol class="carousel-indicators">
+				<li data-target="#my-slider" data-slide-to="0" class="active"></li>
+				<li data-target="#my-slider" data-slide-to="1"></li>
+				<li data-target="#my-slider" data-slide-to="2"></li>
+			</ol>
+
+				<!--for the slides that will be placed-->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="../assets/img/slides/1.png" alt="">
+				</div>
+				<div class="item">
+					<img src="../assets/img/slides/2.png" alt="">
+				</div>
+				<div class="item">
+					<img src="../assets/img/slides/3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main main-raised">
+		<div class="container">
+	        <div class="section landing-section">
+	            <div class="row">
+	                <div class="col-md-8 col-md-offset-2">
+	                    <h2 class="text-center title">Why Join Us?</h2>
+						<h4 class="text-center description">We've Always been inspired by stories from others, we want you to be a part of our community, tell your stories and maybe listen to what others have to say.<br>want to know more? watch the video below to know more about us.</h4><br>
+						<div class="row">
+							<div class="col-xs-12" align="center">
+								<video width="400" controls>
+									<source src="../assets/videos/ourad.mp4" type="video/mp4">
+									Your browser does not support this video
+								</video>
+							</div>
+						</div>
+							<br>
+							<br>
+							<h3 class="text-center title">Sign In</h3>
+							<form class="contact-form">
+	                        	<div class="row">
+	                                <div class="col-md-6">
+										<div class="form-group label-floating" id="signin">
+											<label class="control-label">Email or User Name</label>
+											<input type="email" class="form-control">
+										</div>
+	                                </div>
+	                                <div class="col-md-6">
+										<div class="form-group label-floating">
+											<label class="control-label">Password</label>
+											<input type="password" class="form-control">
+										</div>
+	                                </div>
+	                            </div>
+
+	                            <div class="row">
+	                                <div class="col-md-4 col-md-offset-4 text-center">
+	                                    <button class="btn btn-primary btn-raised" onclick="submit">
+											Sign In
+										</button>
+	                                </div>
+	                            </div>
+	                        </form>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+		</div>
+	</div>

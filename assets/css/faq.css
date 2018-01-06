@@ -1,0 +1,11 @@
+#faq-back{
+	background-image: url('../img/contact/faq.png'); 
+	background-repeat: no-repeat; 
+	background-position: left top; 
+	background-color: #330000; 
+	padding:15% 0% 0% 0%;
+}
+
+#btw{
+	height: 60px;
+}

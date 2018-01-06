@@ -1,0 +1,35 @@
+<title>MainFeed</title>
+<!-- CSS Files -->
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="../assets/css/styling.css" rel="stylesheet"/>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap3-typeahead.js" type="text/javascript"></script>
+
+<!-- Search Options -->
+<script type="text/javascript">
+var jsFile;
+$(document).ready(function(){
+var ret = [];
+$.getJSON("data.json", function(result){
+console.log(0);
+jsFile = result;
+ret.push(result.data[0].title);
+ret.push(result.data[1].title);
+ret.push(result.data[2].title);
+ret.push(result.data[3].title);
+ret.push(result.data[4].title);
+ret.push(result.data[5].title);
+console.log(ret);
+
+
+});
+
+$('#search1').typeahead({
+source: function(query, process){
+process(ret);				    	
+}
+});
+});
+</script>
+
+</head>

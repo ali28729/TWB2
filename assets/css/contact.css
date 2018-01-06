@@ -1,0 +1,58 @@
+.bs-example{
+		margin: 20px;
+		background-color: #f6d7d4;	
+	}
+
+.card {
+	background-color: #f6d7d4;		
+}
+
+.header-primary{
+	background-color: gray;
+}
+
+.nav{
+	background-color: #f6d7d4;
+}
+
+.card .header-primary {
+    background: #9e3b33 !important;
+}
+
+#map {
+        height: 400px;
+        width: 100%;
+      }
+
+h1,h2,h3,h4,h5,h6{
+	color: black;
+}
+
+.tad{
+	color: black;
+}
+
+#p-logo{
+padding-right: 10px;
+color: black;
+}
+
+.log-col{
+	color: black;
+}
+
+#m-logo{
+	margin-right: 14px;
+	color: black;
+}
+
+.logo-font{
+	font-size: 24px;
+	color: black;
+}
+
+#back-contact{
+	background-image: url('../img/bg.jpg'); 
+	background-size: cover; 
+	background-position: top center;
+}
