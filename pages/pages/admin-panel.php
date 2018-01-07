@@ -103,7 +103,103 @@
 						  echo "</center></td>";
 
 						  echo "<td><center>";
-						  echo '<a href="delete.php?id=' . $row['ID'] . ' "><i class="fa fa-trash"></i></a>';
+						  echo '<a href="delete-post.php?id=' . $row['ID'] . ' "><i class="fa fa-trash"></i></a>';
+						  echo "</center></td>";
+						    
+						  echo "</td>";
+						  	
+						  echo "</tr>";
+
+
+							}
+							?>
+
+						</table>
+
+						<h2 class="title">Here be our awesome users:</h2>
+						<div class="container">
+						<table id="admin">
+							<tr>
+								<td>
+									<center>
+									<b>
+									User ID
+									</b>
+									</center>
+								</td>
+								<td>
+									<center>
+									<b>
+									Email
+									</b>
+									</center>
+								</td>
+								<td>
+									<center>
+									<b>
+									Password
+									</b>
+									</center>
+								</td>
+								<td>
+									<center>
+									<b>
+									DoB
+									</b>
+									</center>
+								</td>
+								<td>
+									<center>
+									<b>
+									Gender
+									</b>
+									</center>
+								</td>
+								<td>
+									<center>
+									<b>
+									Delete
+									</b>
+									</center>
+								</td>
+							</tr>
+							<?php
+
+						// run query
+						$query = mysql_query("SELECT * FROM user");
+
+						// set array
+						$array = array();
+
+
+						// look through query
+						while($row = mysql_fetch_assoc($query)){
+
+
+						  echo "<tr>";
+
+						  echo "<td><center>";
+						  echo $row['ID'];
+						  echo "</center></td>";
+
+						  echo "<td><center>";
+						  echo $row['Email'];
+						  echo "</center></td>";
+
+						  echo "<td><center>";
+						  echo $row['Pass'];
+						  echo "</center></td>";
+
+						  echo "<td><center>";
+						  echo $row['DOB'];
+						  echo "</center></td>";
+
+						  echo "<td><center>";
+						  echo $row['Gender'];
+						  echo "</center></td>";
+
+						  echo "<td><center>";
+						  echo '<a href="delete-user.php?email=' . $row['Email'] . ' "><i class="fa fa-trash"></i></a>';
 						  echo "</center></td>";
 						    
 						  echo "</td>";

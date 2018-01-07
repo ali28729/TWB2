@@ -10,7 +10,7 @@ $link = mysqli_connect($host,$user,$pass) or die ("Connection was unsuccessful")
 mysqli_select_db($link,"btwofficial");
 
 
-$id = $_GET['id'];
+	$id = $_GET['id'];
 	echo "$id";
 
  $sqlQuery = "DELETE FROM posts WHERE ID='$id'";
