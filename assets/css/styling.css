@@ -19,6 +19,7 @@
 /* Shadows (from mdl http://www.getmdl.io/) */
 body {
   background-color: #f6d7d4;
+  padding-right: 0 !important
 }
 body.inverse {
   background: #333333;
@@ -55,6 +56,7 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
 #myModalLabel{
   font-weight: bold;
 }
+
 /* NOT EXECUTING AT END */
 
 

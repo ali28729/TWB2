@@ -96,15 +96,6 @@ function supInserter($email,$pass,$dob,$gender){
 
 }
 
-function profileInserter($id, $fname, $sname,$Location, $about, $ppic,$cpic){
-
-    $sqlQuery = "INSERT INTO `userprofile` (`Fname`,`Sname`,`ID`,`Location`,`About`,`Ppic`,`Cpic`) VALUES ('$fname','$sname','$id','$Location','$about','$ppic','$cpic')";
-    mysql_query($sqlQuery) or die(mysql_error());
-    
-}
-
-
-
 function idAccess($recidentifier){
     
         $identifier = $recidentifier;
@@ -115,17 +106,6 @@ function idAccess($recidentifier){
     
         return $results["ID"];
     }
-
-function pidAccess($recidentifier){
-        
-        $identifier = $recidentifier;
-        
-        $sqlQuery = "SELECT * FROM userprofile WHERE ID = $identifier";
-        $rawData = mysql_query($sqlQuery);
-        $results = mysql_fetch_array($rawData);
-        
-        return $results["PID"];
-}
 
 function sinValidator($username,$recPassword){
 
@@ -162,24 +142,6 @@ function updatePass($username,$oldPass,$newPass){
     }
 }
 
-/*Ali specific functions*/
-
-/*for global feed*/
-function gPost(){
-    $sqlQuery = "SELECT * FROM posts ORDER BY ID ASC";
-    $rawData = mysql_query($sqlQuery);
-
-    $datas = array();
-    if(mysql_num_rows($rawData)>0){
-        while($row = mysql_fetch_assoc($rawData)){
-            $datas[] = $row;
-        }
-    }
-
-    return $datas;
-
-}
-
 
 /*Test usage of the Functions for understanding*/
 /*these are just demonstration examples, extensive details have been shared in documentation*/
@@ -194,7 +156,6 @@ $validator = sinValidator("umaryousafzai9@gmail.com","rechangedit");
 
 $newdatas = myPosts(1);
 $favposts = favPosts(1);
-$gdata = gPost();
 
 $idfromemail = idAccess("khan@yahoo.com");
 
@@ -205,12 +166,6 @@ echo "<br>";
 
 foreach($newdatas as $data){
     echo $data['PID']."<br>";
-}
-
-echo "<br>";
-
-foreach ($gdata as $data){
-    echo $data['ID']."<br>";
 }
 
 echo "<br>";
@@ -231,8 +186,6 @@ $status = updatePass("umaryousafzai9@gmail.com","ichangedit","rechangedit");
 
 echo $status."<br>";
 
-$newtest = pidAccess(1);
-
 echo $outside4."<br>";
 echo $outside5."<br>";
 echo $outside."<br>";
@@ -240,7 +193,6 @@ echo $outside2."<br>";
 echo $outside3."<br>";
 
 echo 'this all ran';
-echo "<br>".$newtest."<br>";
 
 mysql_close($link);
 
