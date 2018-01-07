@@ -76,22 +76,25 @@
 	<div class="main">
 		<div class="container">
 		  <div class="row">
+
 		    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-		      <div class="thumbnail" data-toggle="modal" data-target="#GSCCModal">
+		      <div class="thumbnail" data-toggle="modal" data-target="#GSCCModal"  data-todo='{"title":"The Real Winner","username":"xyz", "image":"https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/s720x720/24059403_2032368223503934_1157411341733837107_o.jpg?oh=06276bdb7aea4757105a6d5176c3a2fd&oe=5AC08E38", "story":"I almost married my high school sweetheart. She was a sharp girl. Very kind. Long brown hair, slim-- the whole package. We moved to California together after graduation. We spent all our time together. We were in love. We even talked about marriage several times. Then one morning she decided she didn’t want to do it anymore. She told me things had changed. It destroyed me. Ever since then, she’s been the one that I’ve always wondered about. I actually saw her a couple years ago. She came to New York for her father’s funeral, and we took a walk in Central Park together. I hadn’t seen her in forty-five years. She looked amazing. Exactly the same as I remembered. She had two kids. She’d gotten married to some guy from Yale. Toward the end of our walk, she told me that if she could do it all over again, she probably would have never married the guy. I said: ‘That breaks my heart, because all these years I imagined you were happy.’ Of course, there might have been a small part of me that was thinking: ‘Haha! You married the wrong guy."}'>
 		        <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/s720x720/24059403_2032368223503934_1157411341733837107_o.jpg?oh=06276bdb7aea4757105a6d5176c3a2fd&oe=5AC08E38" class="">
 		        <div class="caption">
 		          <h3 id="thumbnail-label">The Real Winner</h3>
-		          <p>I almost married my high school sweetheart. She was a sharp girl. Very kind. Long brown hair, slim-- the whole package. We moved to California together after graduation. We spent all our time together. We were in love. We even talked about marriage several times. Then one morning she decided she didn’t want to do it anymore. She told me things had changed. It destroyed me. Ever since then, she’s been the one that I’ve always wondered about. I actually saw her a couple years ago. She came to New York for her father’s funeral, and we took a walk in Central Park together. I hadn’t seen her in forty-five years. She looked amazing. Exactly the same as I remembered. She had two kids. She’d gotten married to some guy from Yale. Toward the end of our walk, she told me that if she could do it all over again, she probably would have never married the guy. I said: ‘That breaks my heart, because all these years I imagined you were happy.’ Of course, there might have been a small part of me that was thinking: ‘Haha! You married the wrong guy.</p>
+		          <p name = "story-caption" id="story-caption">I almost married my high school sweetheart...</p>
 		        </div>
 		        <div class="caption card-footer">
 		          <ul class="list-inline">
 		            <li><i class="fa fa-user"></i></li>
 		            <li>321</li>
-		            <li ><button type="button" class="btn btn-white"><i class="fa fa-heart-o fa-1x"></i></button></li>
+		            <li ><button id="like" type="button" class="btn btn-white "><i class="fa fa-heart-o fa-1x"></i></button></li>
+		            <li style="float: right;"><p>blob</p></li>
 		          </ul>
 		        </div>
 		      </div>
 		    </div>
+
 		    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 ">
 		      <div class="thumbnail">
 		        <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/25182127_2060810173993072_1272981479163134608_o.jpg?oh=dbda185d7558f0bfc2dbab227a248697&oe=5AC9B00A" class="">
@@ -147,7 +150,7 @@
 		        <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/18402159_1731249050282521_5617620739713873442_o.jpg?oh=d3e25a2f7fc19ed57e44eb4cbf8135ef&oe=5ACA16E3" class="">
 		        <div class="caption">
 		          <h3 id="thumbnail-label">Orthodox Artist</h3>
-		          <p>I’m obsessive, but my obsessions are productive. I’m happy. I never get depressed. I find life very interesting. I paint for hours every day. I have 100,000 postcards at home organized geographically. And I’ve written a story about every day of my life between 1981 and 2011. I have 20,000 pages of notes. Right now I’m in the editing phase. I’ll be done with that in a couple years, and then I’m going to copy the entire thing by hand. There's no way I can trust computers with something this important. I think I can finish the job in ten years. I’m pretty sure I can live long enough.</p>
+		          <p>I’m obsessive, but my obsessions are productive. I’m happy. I never get depressed. I find life very interesting. I paint for hours every day. I have 100,000 postcards at home organized geographically. And I’ve written a thumbnail about every day of my life between 1981 and 2011. I have 20,000 pages of notes. Right now I’m in the editing phase. I’ll be done with that in a couple years, and then I’m going to copy the entire thing by hand. There's no way I can trust computers with something this important. I think I can finish the job in ten years. I’m pretty sure I can live long enough.</p>
 		        </div>
 		        <div class="caption card-footer">
 		          <ul class="list-inline">
@@ -188,14 +191,18 @@
  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;  </button>
-        <h4 class="modal-title" id="myModalLabel">The Real Winner</h4>
-      </div>
-      <img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/s720x720/24059403_2032368223503934_1157411341733837107_o.jpg?oh=06276bdb7aea4757105a6d5176c3a2fd&oe=5AC08E38" class="" style="width: 100%;">
+        <h3 class="modal-title" id="myModalLabel"></h3>
+      </div> 
+      <img id="mimg" src="" >
       <div class="modal-body">
-        I almost married my high school sweetheart. She was a sharp girl. Very kind. Long brown hair, slim-- the whole package. We moved to California together after graduation. We spent all our time together. We were in love. We even talked about marriage several times. Then one morning she decided she didn’t want to do it anymore. She told me things had changed. It destroyed me. Ever since then, she’s been the one that I’ve always wondered about. I actually saw her a couple years ago. She came to New York for her father’s funeral, and we took a walk in Central Park together. I hadn’t seen her in forty-five years. She looked amazing. Exactly the same as I remembered. She had two kids. She’d gotten married to some guy from Yale. Toward the end of our walk, she told me that if she could do it all over again, she probably would have never married the guy. I said: ‘That breaks my heart, because all these years I imagined you were happy.’ Of course, there might have been a small part of me that was thinking: ‘Haha! You married the wrong guy.
+        <p name = "mcaption" id="mcaption"></p>
       </div>
       <div class="modal-footer">
+      	<ul class="list-inline">
+			<li><i class="fa fa-user"></i></li>
+			<li>321</li>
+			<li ><button id="like" type="button" class="btn btn-white "><i class="fa fa-heart-o fa-1x"></i></button></li>
+	    </ul>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>

@@ -7,29 +7,17 @@
 
 <!-- Search Options -->
 <script type="text/javascript">
-var jsFile;
-$(document).ready(function(){
-var ret = [];
-$.getJSON("data.json", function(result){
-console.log(0);
-jsFile = result;
-ret.push(result.data[0].title);
-ret.push(result.data[1].title);
-ret.push(result.data[2].title);
-ret.push(result.data[3].title);
-ret.push(result.data[4].title);
-ret.push(result.data[5].title);
-console.log(ret);
-
-
-});
-
-$('#search1').typeahead({
-source: function(query, process){
-process(ret);				    	
-}
-});
-});
+	$(document).ready(function() {
+        $(".thumbnail").click(function () {;
+        	$('#like').on('click', function(e) {
+			   e.stopPropagation();
+			});	
+	            $(".modal-body #mcaption").text($(this).data('todo').story);
+	            console.log($(this).data('todo').image);
+	            $("#mimg").attr("src",$(this).data('todo').image);
+	            $("#myModalLabel").text($(this).data('todo').title);
+        })
+    });
 </script>
 
 </head>
