@@ -46,6 +46,18 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
   line-height: 1.5em;
 }
 
+
+/* NOT EXECUTING AT END */
+#mimg{
+  width:100%;
+}
+
+#myModalLabel{
+  font-weight: bold;
+}
+/* NOT EXECUTING AT END */
+
+
 a, a:hover, a:focus {
   color: #9c27b0;
 }
@@ -3851,7 +3863,6 @@ h2.title {
     margin-left: 10px;
     border-radius: 6px 0 6px 6px;
 }
-
 
 
 
