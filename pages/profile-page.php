@@ -6,7 +6,7 @@ include "linkers/header-css.html";
 
 <body>
 	<?php
-	include "pages/header.html";
+	include "pages/header.php";
 	include "pages/profile-page.html";	
 	include "pages/footer.html";
 	?>

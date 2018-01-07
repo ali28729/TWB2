@@ -6,7 +6,7 @@ include "linkers/header-css.html";
 
 <body>
 	<?php
-	include "pages/header.html";
+	include "pages/header.php";
 	include_once "connect.php";
 	include "pages/admin-panel.php";	
 	?>

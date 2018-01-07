@@ -56,9 +56,38 @@
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fa fa-address-book fa-1.5x"></i> Sign Up</a></li>
+                            <?php
+                            if (isset($_SESSION['uid'])) {
+                                echo"<li>";
+                            echo"<a href='session-expire.php'>";
+                            echo"<i class='fa fa-sign-out fa-1.5x'></i>";
+                            echo "    Sign Out ";
+                            echo"</a>";
+                            echo "</li>";
+                            }
+                            else{
+                            echo"<li>";
+                            echo"<a href='landing-page.php#signinform'>";
+                            echo"<i class='fa fa-sign-in fa-1.5x'></i>";
+                            echo "    Sign In ";
+                            echo"</a>";
+                            echo "</li>";
+
+                            echo"<li>";
+                            echo"<a href='signup-page.php'>";
+                            echo"<i class='fa fa-address-book fa-1.5x'></i>";
+                            echo "    Sign Up ";
+                            echo"</a>";
+                            echo "</li>";
+                            }
+                            //<li><a href="#"><i class="fa fa-address-book fa-1.5x"></i> Sign Up</a></li>
+                            //if(isset($_SESSION['uid'])){
+                                
                             
-                            <li><a href="#"><i class="fa fa-sign-in fa-1.5x"></i> Sign In</a></li>
+
+                               // echo"<li><a href='#''><i class='fa fa-sign-in fa-1.5x'></i> Sign In</a></li>";   
+                            
+                            ?>
                             <!--<li><a href="#"><i class="fa fa-sign-out fa-1.5x"></i> Sign Out</a></li>-->
                         </ul>
                     </li>
