@@ -19,6 +19,7 @@
 /* Shadows (from mdl http://www.getmdl.io/) */
 body {
   background-color: #f6d7d4;
+  padding-right: 0 !important
 }
 body.inverse {
   background: #333333;
