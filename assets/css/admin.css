@@ -1,0 +1,23 @@
+#admin-back{
+	background-image: url('../../assets/img/admin/banner.jpg'); 
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-color: #330000; 
+	padding-top: 0px;
+	padding:0% 0% 0% 0%;
+}
+
+#btw{
+	height: 60px;
+}
+
+#admin{
+   border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
