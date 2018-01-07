@@ -5,7 +5,7 @@ include "linkers/admin-panel-css.html";
 
 <body>
 	<?php
-	include "connect.php";
+	include_once "connect.php";
 	include "pages/admin-panel.php";	
 	?>
 </body>

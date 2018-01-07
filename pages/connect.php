@@ -14,6 +14,7 @@ mysql_select_db("btwofficial");
 
 
 /*Custom Functions*/
+
 function userTable($recidentifier,$recwantedColumn){
 
     $identifier = $recidentifier;

@@ -1,10 +1,4 @@
 <?php
-include "linkers/common-head.html";
-include "linkers/landing-page-css.html";
-?>
-
-<body>
-	<?php
 
 session_start();
 //echo "<script>alert('Inside Landing script')</script>";
@@ -12,7 +6,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 
 	include_once "connect.php";
 if (isset($_SESSION['uid'])) {                         //if session variable is set
-	header("location: profile-page.php");
+	header("location: ../profile-page.php");
 }
 
 
@@ -29,7 +23,7 @@ if (isset($_POST['submit'])) {
 	if ($rows == 1) {
 		$userID = idAccess($username);                       //initialize new session variable
 		$_SESSION['uid'] = $userID;
-		header("location: profile-page.php");               // Redirecting To Profile Page      		
+		header("location: ../profile-page.php");               // Redirecting To Profile Page      		
 	}     
 
 	else {
@@ -45,14 +39,4 @@ function inputFilter($fieldValue){                            //XSS Protection
     return $filter;
 }
 
-
-	include "pages/landing-page.html";
-	include "pages/footer.html";	
-	?>
-</body>
-
-<?php
-include "linkers/fallback-resources.html";
 ?>
-
-</html>

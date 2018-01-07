@@ -89,30 +89,33 @@
 							<br>
 							<br>
 							<h3 class="text-center title">Sign In</h3>
-							<form class="contact-form">
+							<form class="contact-form" action="landing-page.php" method="POST">
 	                        	<div class="row">
 	                                <div class="col-md-6">
 										<div class="form-group label-floating" id="signin">
 											<label class="control-label">Email or User Name</label>
-											<input type="email" class="form-control">
+											
+										<input type="email" id="email" name="username" placeholder="Email..." class="form-control" required="">
 										</div>
 	                                </div>
 	                                <div class="col-md-6">
 										<div class="form-group label-floating">
 											<label class="control-label">Password</label>
-											<input type="password" class="form-control">
+										
+											<input type="password" id="pass" name="password" placeholder="Password..." class="form-control">
 										</div>
 	                                </div>
 	                            </div>
 
 	                            <div class="row">
 	                                <div class="col-md-4 col-md-offset-4 text-center">
-	                                    <button class="btn btn-primary btn-raised" onclick="submit">
+	                                	<button class="btn btn-primary btn-raised" id="btn" name="submit">
 											Sign In
 										</button>
 	                                </div>
 	                            </div>
 	                        </form>
+	                        
 	                    </div>
 	                </div>
 	            </div>
