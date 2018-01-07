@@ -9,13 +9,15 @@
 <script type="text/javascript">
 	$(document).ready(function() {
         $(".thumbnail").click(function () {;
-        	$('#like').on('click', function(e) {
+        	$('.like').on('click', function(e) {
 			   e.stopPropagation();
 			});	
 	            $(".modal-body #mcaption").text($(this).data('todo').story);
 	            console.log($(this).data('todo').image);
 	            $("#mimg").attr("src",$(this).data('todo').image);
 	            $("#myModalLabel").text($(this).data('todo').title);
+	            $("#mfav").text($(this).data('todo').favcount);
+	            $("#muser").text($(this).data('todo').username);
         })
     });
 </script>
