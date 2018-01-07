@@ -1,6 +1,7 @@
 <?php
 include "linkers/common-head.html";
 include "linkers/landing-page-css.html";
+include "linkers/header-css.html";
 ?>
 
 <body>
@@ -42,10 +43,10 @@ if (isset($_POST['submit'])) {
 function inputFilter($fieldValue){                            //XSS Protection 
     $strip = strip_tags($fieldValue);
     $filter = htmlspecialchars($strip);
-    return $filter;
+    return $filter;	
 }
 
-
+	include "pages/header.html";
 	include "pages/landing-page.html";
 	include "pages/footer.html";	
 	?>
