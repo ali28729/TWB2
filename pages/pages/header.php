@@ -15,7 +15,7 @@
 
             <div class="collapse navbar-collapse" id="MainNav">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li>
                         <a href="#explore">
                             <i class="material-icons">explore</i>
                             Explore
