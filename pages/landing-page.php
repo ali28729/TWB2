@@ -30,6 +30,7 @@ if (isset($_POST['submit'])) {
 	if ($rows == 1) {
 		$userID = idAccess($username);                       //initialize new session variable
 		$_SESSION['uid'] = $userID;
+		$_POST['$userID'];
 		header("location: profile-page.php");               // Redirecting To Profile Page      		
 	}     
 

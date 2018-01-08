@@ -1,7 +1,9 @@
 	<?php
 
 	//$id=$_SESSION['uid'];
-	$query = mysql_query("SELECT * FROM userprofile where ID='3'");
+	$uid=$_SESSION['uid'];
+
+	$query = mysql_query("SELECT * FROM userprofile where ID='$uid'");
 
 	$array = array();
 
@@ -14,7 +16,7 @@
 
 	}
 						// look through query
-	
+
 	?>
 
 	<div class="wrapper">
@@ -92,7 +94,7 @@
 				                            </div>
 										</div>
 										
-										<div class="tab-pane active" id="favourites">
+										<div class="tab-pane" id="favourites">
 				                            <div class="row">					
 				                            	<?php
 												$query = mysql_query("SELECT * FROM posts where ID= 
