@@ -217,14 +217,14 @@ ALTER TABLE `userprofile`
 --
 ALTER TABLE `favorites`
   ADD CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`UID`) REFERENCES `user` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`PID`) REFERENCES `posts` (`ID`);
+  ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`PID`) REFERENCES `posts` (`ID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `my`
 --
 ALTER TABLE `my`
   ADD CONSTRAINT `my_ibfk_1` FOREIGN KEY (`UID`) REFERENCES `user` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `my_ibfk_2` FOREIGN KEY (`PID`) REFERENCES `posts` (`ID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `my_ibfk_2` FOREIGN KEY (`PID`) REFERENCES `posts` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `posts`

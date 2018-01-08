@@ -13,7 +13,6 @@ mysqli_select_db($link,"btwofficial");
 	$email = $_GET['email'];
 	echo "$email";
 
- $sqlQuery = " WHERE Email='$email'";
  $sqlQuery = "DELETE FROM user WHERE Email='$email'";
  mysqli_query($link,$sqlQuery);
  
