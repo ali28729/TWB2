@@ -67,7 +67,7 @@
 										<div class="tab-pane active" id="mystories">
 				                            <div class="row">					
 				                            	<?php
-												$query = mysql_query("SELECT * FROM posts where UID='3' ");
+												$query = mysql_query("SELECT * FROM posts where UID='$uid' ");
 												$array = array();
 												while($row = mysql_fetch_assoc($query)){
 													$blobimg = base64_encode($row['Pic']);
@@ -98,7 +98,7 @@
 				                            <div class="row">					
 				                            	<?php
 												$query = mysql_query("SELECT * FROM posts where ID= 
-													(SELECT PID FROM favorites where UID='1') ");
+													(SELECT PID FROM favorites where UID='$uid') ");
 												$array = array();
 												while($row = mysql_fetch_assoc($query)){
 													$blobimg = base64_encode($row['Pic']);
