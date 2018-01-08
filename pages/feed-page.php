@@ -8,7 +8,7 @@ include "linkers/header-css.html";
 	<?php
 	include "pages/header.php";
 	include_once "connect.php";
-	include "pages/feed-page.html";	
+	include "pages/feed-page.php";	
 	include "pages/footer.html";
 	?>
 </body>
