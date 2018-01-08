@@ -18,6 +18,6 @@ mysqli_select_db($link,"btwofficial");
  mysqli_query($link,$sqlQuery);
  
 
-//header("Location:admin-panel.php");
+header("Location:admin-panel.php");
 
 ?>
