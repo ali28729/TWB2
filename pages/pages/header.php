@@ -1,10 +1,10 @@
     <?php
     if (isset($_SESSION['uid'])) {
-                            $home="feed-page.php";
-                            }
-                            else{
-                            $home="landing-page.php";
-                            }
+        $home="feed-page.php";
+        }
+        else{
+        $home="landing-page.php";
+        }
     ?>
 
 
