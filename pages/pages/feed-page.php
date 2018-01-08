@@ -1,9 +1,4 @@
 <div class="wrapper">
-	<br>
-	<br>
-	<div class="form-group" id="for1">
-	  <input type="search" class="form-control" data-provide="typeahead" id="search1" placeholder="Search...">
-	</div>	
 	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
 	<div class="main">
 		<div id="cont" class="container">
