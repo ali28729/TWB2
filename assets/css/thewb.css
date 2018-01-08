@@ -43,6 +43,8 @@ a .material-icons, a:hover .material-icons, a:focus .material-icons {
   transition: all 300ms linear;
 }
 
+
+
 .animation-transition-slow {
   -webkit-transition: all 370ms linear;
   -moz-transition: all 370ms linear;

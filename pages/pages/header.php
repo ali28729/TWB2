@@ -89,15 +89,7 @@
                             echo"</a>";
                             echo "</li>";
                             }
-                            //<li><a href="#"><i class="fa fa-address-book fa-1.5x"></i> Sign Up</a></li>
-                            //if(isset($_SESSION['uid'])){
-                                
-                            
-
-                               // echo"<li><a href='#''><i class='fa fa-sign-in fa-1.5x'></i> Sign In</a></li>";   
-                            
                             ?>
-                            <!--<li><a href="#"><i class="fa fa-sign-out fa-1.5x"></i> Sign Out</a></li>-->
                         </ul>
                     </li>
                 </ul>

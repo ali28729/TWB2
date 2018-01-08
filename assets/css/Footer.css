@@ -61,6 +61,9 @@
 #myFooter a {
     color: white;
     text-decoration: none;
+     margin-top: 0px;
+     margin-bottom: 0px;
+     padding:0px 0px 0px 0px;
 }
 
 #myFooter a:hover,
@@ -106,7 +109,7 @@
     width: 150px;
     display: block;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 0px;
     line-height: 25px;
 }
 
