@@ -1,3 +1,12 @@
+    <?php
+    if (isset($_SESSION['uid'])) {
+                            $home="feed-page.php";
+                            }
+                            else{
+                            $home="landing-page.php";
+                            }
+    ?>
+
 
     <nav class="navbar navbar-primary navbar-fixed-top">
         <div class="container">
@@ -10,7 +19,8 @@
                 <a class= "navbar-brand" id="nav-logo" href="#logo">
                     <img src="../assets/img/logo.png" height="60px">
                 </a>
-                <a class="navbar-brand" id="nav-title" href="#title"><b>The World Beyond<b></a>
+                <a class="navbar-brand" id="nav-title" href= <?php echo"$home"; ?>
+                ><b>The World Beyond<b></a>
             </div>
 
             <div class="collapse navbar-collapse" id="MainNav">
