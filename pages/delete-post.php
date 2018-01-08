@@ -13,10 +13,10 @@ mysqli_select_db($link,"btwofficial");
 	$id = $_GET['id'];
 	echo "$id";
 
- $sqlQuery = "DELETE FROM posts WHERE ID='$id'";
- mysqli_query($link,$sqlQuery);
- 
+ 	$sqlQuery = "DELETE FROM posts WHERE ID='$id'";
+ 	mysqli_query($link,$sqlQuery);
+ 	
+ 	header("Location:admin-panel.php");
 
-header("Location:admin-panel.php");
 
 ?>
