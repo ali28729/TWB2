@@ -1,3 +1,4 @@
+
     <?php
     if (isset($_SESSION['uid'])) {
                             $home="feed-page.php";

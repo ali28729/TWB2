@@ -13,8 +13,13 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 
 	include_once "connect.php";
 if (isset($_SESSION['uid'])) {                         //if session variable is set
-	header("location: profile-page.php");
+	
+	
+	
+    header("location: profile-page.php");
 }
+ 
+
 
 
 if (isset($_POST['submit'])) { 
@@ -30,6 +35,7 @@ if (isset($_POST['submit'])) {
 	if ($rows == 1) {
 		$userID = idAccess($username);                       //initialize new session variable
 		$_SESSION['uid'] = $userID;
+		$_SESSION['timer'] = time();
 		$_POST['$userID'];
 		header("location: profile-page.php");               // Redirecting To Profile Page      		
 	}     

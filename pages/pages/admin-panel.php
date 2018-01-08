@@ -1,5 +1,8 @@
+	<?php
 
-
+	$da=$_SESSION['timer'];
+	echo "$da";
+	?>
 
 	<div class="wrapper" >
     	<center>
@@ -27,7 +30,7 @@
 								<td>
 									<center>
 									<b>
-									Post ID
+									<?php echo"$da";?>
 									</b>
 									</center>
 								</td>
@@ -218,3 +221,4 @@
 	    
 
 	</div>
+				
