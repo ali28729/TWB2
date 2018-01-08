@@ -16,11 +16,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>                  
                 </button>
-                <a class= "navbar-brand" id="nav-logo" href="#logo">
+                <a class= "navbar-brand" id="nav-logo" href= <?php echo"$home"; ?> >
                     <img src="../assets/img/logo.png" height="60px">
                 </a>
-                <a class="navbar-brand" id="nav-title" href= <?php echo"$home"; ?>
-                ><b>The World Beyond<b></a>
+                <a class="navbar-brand" id="nav-title" href= <?php echo"$home"; ?>> <b>The World Beyond<b></a>
             </div>
 
             <div class="collapse navbar-collapse" id="MainNav">
