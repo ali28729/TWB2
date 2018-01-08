@@ -10,12 +10,14 @@
         	$('.like').on('click', function(e) {
 			   e.stopPropagation();
 			});	
-	            $(".modal-body #mcaption").text($(this).data('todo').story);
-	            console.log($(this).data('todo').image);
-	            $("#mimg").attr("src",$(this).data('todo').image);
-	            $("#myModalLabel").text($(this).data('todo').title);
+				var img = 'data:image/jpeg;base64,'+ $(this).data('todo').image;
+				console.log(img);
+				$("#myModalLabel").text($(this).data('todo').title);
+	            $("#mcaption").text($(this).data('todo').story);
 	            $("#mfav").text($(this).data('todo').favcount);
 	            $("#muser").text($(this).data('todo').username);
+	            $("#mimg").attr("src",img);
+
         })
     });
 </script>
