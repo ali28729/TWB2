@@ -1,3 +1,45 @@
+<?php
+	// run query
+	$query = mysql_query("SELECT * FROM posts");
+
+	// set array
+	$array = array();
+
+	// look through query
+	while($row = mysql_fetch_assoc($query)){
+
+
+	echo "<tr>";
+
+	echo "<td><center>";
+	echo $row['ID'];
+	echo "</center></td>";
+
+	echo "<td><center>";
+	echo $row['Title'];
+	echo "</center></td>";
+
+	echo "<td><center>";
+	echo $row['Text'];
+	echo "</center></td>";
+
+	echo "<td><center>";
+	echo $row['Genre'];
+	echo "</center></td>";
+
+	echo "<td><center>";
+	echo $row['FavCount'];
+	echo "</center></td>";
+
+	echo "<td><center>";
+	echo '<a href="delete-post.php?id=' . $row['ID'] . ' "><i class="fa fa-trash"></i></a>';
+	echo "</center></td>";
+
+	echo "</td>";
+	echo "</tr>";
+	}
+?>
+
 <div class="wrapper">
 	<br>
 	<br>
