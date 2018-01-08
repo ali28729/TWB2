@@ -7,7 +7,8 @@ include "linkers/header-css.html";
 <body>
 	<?php
 	include "pages/header.php";
-	include "pages/profile-page.html";	
+	include_once "connect.php";
+	include "pages/profile-page.php";	
 	include "pages/footer.html";
 	?>
 </body>
