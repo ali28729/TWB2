@@ -1,4 +1,4 @@
-<?php
+	<?php
 include "linkers/common-head.html";
 include "linkers/landing-page-css.html";
 include "linkers/header-css.html";
@@ -12,46 +12,36 @@ session_start();
 error_reporting(E_ALL ^ E_DEPRECATED);
 
 	include_once "connect.php";
-if (isset($_SESSION['uid'])) {                         //if session variable is set
-	
-	
-	
-    header("location: profile-page.php");
-}
- 
-
-
-
 if (isset($_POST['submit'])) { 
 
-	$username = inputFilter($_POST['username']);             //apply filter to all variables 
-	$password = inputFilter($_POST['password']);
+    $fullname = inputFilter($_POST['fullname']);
+    $username = inputFilter($_POST['username']);
+    $gender = inputFilter($_POST['optionsRadios']);
+    $dob = inputFilter($_POST['dob']);
+    $password = inputFilter($_POST['password']);
 
-	//echo "<script>alert('$username')</script>";
-	//echo "<script>alert('$password')</script>";
 
-	$rows = sinValidator($username,$password);              //validate login from database
+    // echo "<script>alert('$fullname')</script>";
+    // echo "<script>alert('$username')</script>";
+    // echo "<script>alert('$gender')</script>";
+    // echo "<script>alert('$dob')</script>";
+    // echo "<script>alert('$email')</script>";
+    // echo "<script>alert('$password')</script>";
 
-	if ($rows == 1) {
-		$userID = idAccess($username);                       //initialize new session variable
-		$_SESSION['uid'] = $userID;
-		$_SESSION['timer'] = time();
-		$_POST['$userID'];
-		header("location: profile-page.php");               // Redirecting To Profile Page      		
-	}     
+    supInserter($username,$password,$dob,$gender);       //insert values into database table user 
+    $userID = idAccess($username);                       //get userID    
+                             //create new entry in userProfile table corresponding to userID
+    $profileID = pidAccess($userID);                     //get profile ID of user
+    $_SESSION['uid'] = $userID;                          //initialize new session variable 
+    header("location: profile-page.php");                // Redirecting To User Profile Page 
 
-	else {
-		header("location: landing-page.php");               // Redirecting To Landing Page		 
-	}
-}
+    }
 
-/* && (!empty($_POST['username'])) && (!empty($_POST['password']))*/
-
-function inputFilter($fieldValue){                            //XSS Protection 
+    function inputFilter($fieldValue){
     $strip = strip_tags($fieldValue);
     $filter = htmlspecialchars($strip);
-    return $filter;	
-}
+    return $filter;
+	}
 
 	include "pages/header.php";
 	include "pages/landing-page.html";
