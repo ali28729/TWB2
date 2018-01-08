@@ -6,6 +6,7 @@ include "linkers/header-css.html";
 
 <body>
 	<?php
+	session_start();
 	include_once "connect.php";
 	include "pages/header.php";
     if (isset($_SESSION['uid'])) {
