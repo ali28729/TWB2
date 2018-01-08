@@ -9,6 +9,9 @@ include "linkers/header-css.html";
 	session_start();
 	include_once "connect.php";
 	include "pages/header.php";
+	?>
+	<br><br><br>
+	<?php
     if (isset($_SESSION['uid'])) {
 		include "upload-option.php";
     }
