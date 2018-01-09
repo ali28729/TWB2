@@ -6,24 +6,15 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
 						<div class="card card-signup">
-							<form class="form" role="form" id="myForm" method="" action="">
+							
+							<form class="form" role="form" id="myForm" method="POST" action="signup-page.php">
 								<div class="header header-primary text-center">
-									<h4>Sign Up for Stories.com</h4>
-									<div class="social-line">
-										<a href="#" class="btn btn-simple btn-just-icon">
-											<i class="fa fa-facebook-square"></i>
-										</a>
-										<a href="#pablo" class="btn btn-simple btn-just-icon">
-											<i class="fa fa-twitter"></i>
-										</a>
-										<a href="#pablo" class="btn btn-simple btn-just-icon">
-											<i class="fa fa-google-plus"></i>
-										</a>
-									</div>
+									<h4><b>Sign Up and start exploring</b></h4>
+									
 								</div>
 
 								<div class="progress" id="pb-div" >
-  									<div class="progress-bar progress-bar-danger progress-bar-striped active " id="pb">
+  									<div class="progress-bar progress-bar-striped active " id="pb">
   									</div>
   								</div>
 
@@ -33,13 +24,9 @@
 										<span class="input-group-addon">
 											<i class="material-icons">face</i>
 										</span>
-										<input type="text" id="fullname" class="form-control" placeholder="Full Name ...">
+										<input type="text" id="fullname" class="form-control" name="fullname" placeholder="Full Name ...">
 
-										<span class="input-group-addon">
-											<i class="fa fa-hand-o-right" style="font-size:24px"></i>
-										</span>
-
-										<input type="text" id="username" class="form-control" placeholder="username ...">
+										
 									</div>
 
 									
@@ -54,12 +41,12 @@
 											<label>&nbsp;&nbsp;Gender</label>
 										</span>
 										<label>
-										<input type="radio" class="form-control" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										<input type="radio" class="form-control" name="optionsRadios" id="optionsRadios1" value="0" checked>
 										Male
 										</label>
                                         &nbsp;
 										<label>
-										    <input type="radio" class="form-control" name="optionsRadios" id="optionsRadios2" value="option2">
+										    <input type="radio" class="form-control" name="optionsRadios" id="optionsRadios2" value="1">
 										Female
 										</label>
 										
@@ -74,7 +61,7 @@
 										</span>
 
 
-										<input type="date" id="dob" class="form-control" placeholder="Your birthdate ..."><br>
+										<input type="date" id="dob" class="form-control" name="dob" placeholder="Your birthdate ..."><br>
 										
 									</div>
 
@@ -86,17 +73,35 @@
 										<span class="input-group-addon">
 											<i class="material-icons">email</i>
 										</span>
-										<input type="email" id="email" class="form-control" placeholder="Email..." required="">
+										<input type="email" id="email" class="form-control" name="email" placeholder="Email..." required="">
 										<span class="input-group-addon">
 											<i class="material-icons">lock_outline</i>
 										</span>                                                           <!-- ******Password Validation******* -->
-										<input type="password" id="pass" placeholder="Password..." class="form-control" onkeyup="validatePass()" />
+										<input type="password" id="pass" name="password"  placeholder="Password..." class="form-control" onkeyup="validatePass()" />
 										<p id='strength'><b> </b></p>
-										<help-text><a href="#">Forgot Password?</a></help-text>
+
+
 									</div>
 
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="fa fa-location-arrow" aria-hidden="true" style="font-size:20px;"></i>
+											<label>&nbsp;&nbsp;&nbsp;&nbsp;</label>
+										</span>
+										<input type="text" id="location" class="form-control" name="location" placeholder="Location...">
+									</div>
 									<br>
 
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="fa fa-edit" aria-hidden="true" style="font-size:20px;"></i>
+											<label>&nbsp;&nbsp;&nbsp;&nbsp;</label>
+										</span>
+										<textarea type="text" id="about" class="form-control" name="about" placeholder="Tell us about yourself...">
+											
+										</textarea>
+									</div>
+									<br>
 
                                     <br>
                                     <div class="checkbox">
@@ -107,8 +112,8 @@
 
 									
 								</div>
-								<div class="footer text-center">                                   <!-- ******The Modal Trigger******* -->
-									<button class="btn btn-primary" id="btn" data-toggle="modal" data-target="#myModal" disabled="disabled">Submit</button> 	
+								<div class="footer text-center">                                   <!-- ******The Modal Trigger******* /*data-toggle="modal" data-target="#myModal"*/-->
+									<button class="btn btn-primary" id="btn" name="submit" disabled="disabled">Submit</button> 	
 								</div>	
                                 							
 							</form>
@@ -122,27 +127,298 @@
 
 
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Congratulations</h4>
-      </div>
-      <div class="modal-body">
-        You have been sucessfully signed up for Stories.com 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-info btn-simple">Save</button>
-      </div>
-    </div>
-  </div>
-</div>			
+    <script >
+
+ function validatePass()
+ 	{
+ 		console.log("I am validating password");
+ 		var pass=document.getElementById('pass').value;
+ 		var regex = Array();
+        regex.push("[A-Z]"); 
+        regex.push("[a-z]"); 
+        regex.push("[0-9]"); 
+        regex.push("[$@$!%*#?&_.]");
+
+        var score=0;
+        
+        
+ 	    if (pass.length!=0){
+        console.log("Password length != 0");
+        for (var i = 0; i < regex.length; i++) {
+            if (new RegExp(regex[i]).test(pass)) {
+            	//console.log("I am here");
+            	//console.log(score);
+                score++;
+            }
+        }
+
+        if (score>2 && pass.length > 7) {
+            score++;
+        }
+
+        if (score==1){
+            strength = 'Bad';        	
+        	document.getElementById("strength").style.color='red';
+        }
+
+        else if (score==2)
+        {
+            strength = 'Fair';
+        	document.getElementById("strength").style.color='orange';
+        }
+        else if (score==3)
+        {
+            strength = 'Good';
+        	document.getElementById("strength").style.color='lightgreen';
+        }
+        else if (score==5)
+        {
+            strength = 'Excellent';
+        	document.getElementById("strength").style.color='green';
+        }
+
+        document.getElementById("strength").innerHTML=strength;
+        console.log(strength);
+        document.getElementById("strength").style.display = 'block';
+    }
 
 
-    		 
-</div>
-</div>
+    else if (pass.length==0){
+    	console.log("Password length == 0");
+    	console.log("removing strength indicator")
+ 		document.getElementById('strength').style.display = 'none';
+ 		
+ 	}
+}
+
+
+ 	</script>
+
+ 	<script> 		
+ 		 //$("#first, #last, #email, #password").on("keyup", function(){
+            //if( $(this).val() != "" && $("#last").val() != "" && $("#email").val() != "" && $("#password").val() != "" ){
+    	//$("#btn").removeAttr("disabled");
+        //}
+    //}); 
+
+
+ 	 $("#fullname, #username, #email, #password").change(function(event) {       //this function successfully appends attribute "disabled"
+ 	 	var count = 0;                                                     
+        x = event.target.value;
+        
+        if (x == 0) {
+        	console.log("I am applying disable");
+            $("#btn").attr("disabled", "disabled");
+        }
+        
+     
+     
+        
+
+    }); 
+
+ 	 $("#myForm").change(function(event) {                                    //******this function successfully removes attribute "disabled"*******
+ 	 	var count = 0;
+        x = event.target.value;
+        if ( $("#fullname").val() != "" ){
+        	if ( $("#username").val() != "" ){
+        		if ( $("#email").val() != "" ){
+        			if ( $("#password").val() != "" ){
+        				console.log("I am removing disable");
+        				$("#btn").removeAttr("disabled", "disabled");
+        			}
+        		}
+        	}
+        }
+
+        else {                                                                    //******majorly useless******* 
+        	$("#btn").attr("disabled", "disabled");
+        }
+
+    }); 
+
+ 	</script>
+
+ 	<script type="text/javascript">
+    	$(document).ready(function(){
+    	
+    	var flag=0;
+
+    	$('#fullname').one("blur", (function()
+    	{	
+    	if( this.value ) {
+         
+    		
+    		val=$("#pb").width();
+
+    		flag=flag+1;
+
+    		switch(flag){
+    			case 1:
+    			val = 20+"%";
+    			break;
+    			case 2:
+    			val = 40+"%";
+    			break;
+    			case 3:
+    			val = 60+"%";
+    			break;
+    			case 4:
+    			val = 80+"%";
+    			break;
+    			case 5:
+    			val = 100+"%";
+    			$("#pb").addClass("progress-bar-success");
+    			break;
+    		}
+
+    		console.log(val);
+    		$("#pb").css("width", val);
+
+    					}
+		}))
+		
+		$('#username').one("blur", (function()
+    	{	
+    	if( this.value ) {
+         
+    		
+    		val=$("#pb").width();
+
+    		flag=flag+1;
+
+    		switch(flag){
+    			case 1:
+    			val = 20+"%";
+    			break;
+    			case 2:
+    			val = 40+"%";
+    			break;
+    			case 3:
+    			val = 60+"%";
+    			break;
+    			case 4:
+    			val = 80+"%";
+    			break;
+    			case 5:
+    			val = 100+"%";
+    			$("#pb").addClass("progress-bar-success");
+    			break;
+    		}
+
+    		console.log(val);
+    		$("#pb").css("width", val);
+
+    					}
+		}))
+
+		$('#dob').one("blur", (function()
+    	{	
+    	if( this.value ) {
+         
+    		
+    		val=$("#pb").width();
+
+    		flag=flag+1;
+
+    		switch(flag){
+    			case 1:
+    			val = 20+"%";
+    			break;
+    			case 2:
+    			val = 40+"%";
+    			break;
+    			case 3:
+    			val = 60+"%";
+    			break;
+    			case 4:
+    			val = 80+"%";
+    			break;
+    			case 5:
+    			val = 100+"%";
+    			$("#pb").addClass("progress-bar-success");
+    			break;
+    		}
+
+    		console.log(val);
+    		$("#pb").css("width", val);
+
+    					}
+		}))
+
+		$('#pass').one("blur", (function()
+    	{	
+    	if( this.value ) {
+         
+    		
+    		val=$("#pb").width();
+
+    		flag=flag+1;
+
+    		switch(flag){
+    			case 1:
+    			val = 20+"%";
+    			break;
+    			case 2:
+    			val = 40+"%";
+    			break;
+    			case 3:
+    			val = 60+"%";
+    			break;
+    			case 4:
+    			val = 80+"%";
+    			break;
+    			case 5:
+    			val = 100+"%";
+    			$("#pb").addClass("progress-bar-success");
+    			break;
+    		}
+
+    		console.log(val);
+    		$("#pb").css("width", val);
+
+    					}
+		}))
+
+		$('#email').one("blur", (function()
+    	{	
+    	if( this.value ) {
+         
+    		
+    		val=$("#pb").width();
+
+    		flag=flag+1;
+
+    		switch(flag){
+    			case 1:
+    			val = 20+"%";
+    			break;
+    			case 2:
+    			val = 40+"%";
+    			break;
+    			case 3:
+    			val = 60+"%";
+    			break;
+    			case 4:
+    			val = 80+"%";
+    			break;
+    			case 5:
+    			val = 100+"%";
+    			$("#pb").addClass("progress-bar-success");
+    			break;
+    		}
+
+    		console.log(val);
+    		$("#pb").css("width", val);
+
+    					}
+		}))
+
+		
+
+		});
+
+		
+    </script>
 
 

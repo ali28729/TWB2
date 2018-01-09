@@ -97,9 +97,9 @@ function supInserter($email,$pass,$dob,$gender){
 
 }
 
-function profileInserter($id, $fname, $sname,$Location, $about, $ppic,$cpic){
+function profileInserter($id, $fname, $sname,$Location, $about){
 
-    $sqlQuery = "INSERT INTO `userprofile` (`Fname`,`Sname`,`ID`,`Location`,`About`,`Ppic`,`Cpic`) VALUES ('$fname','$sname','$id','$Location','$about','$ppic','$cpic')";
+    $sqlQuery = "INSERT INTO `userprofile` (`Fname`,`Sname`,`PID`,'ID',`Location`,`About`) VALUES ('$fname','$sname','NULL','$id','$Location','$about')";
     mysql_query($sqlQuery) or die(mysql_error());
     
 }
