@@ -71,7 +71,7 @@
 												$array = array();
 												while($row = mysql_fetch_assoc($query)){
 													$blobimg = base64_encode($row['Pic']);
-													echo "<div class='col-md-12'>";
+													echo "<div class=\"col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6\">";
 													echo "<div class='thumbnail'>";
 														echo "<a href=''>";
 															echo '<img src="data:image/jpeg;base64,'. $blobimg.'" class="img-rounded"
@@ -82,7 +82,6 @@
 															echo "<div class=\"caption card-footer\">";
 																echo "<ul class=\"list-inline\">";
 																	echo "<li>".$row['FavCount']."</li>";
-																	echo "<li ><button class=\"like\" type=\"button\" class=\"btn btn-white \"><i class=\"fa fa-heart-o fa-1x\"></i></button></li>";
 																	echo "<li class=\"suser\" style=\"text-decoration: underline;\">".$row['Genre']."</li>";
 																echo "</ul>";
 															echo "</div>";
@@ -102,7 +101,7 @@
 												$array = array();
 												while($row = mysql_fetch_assoc($query)){
 													$blobimg = base64_encode($row['Pic']);
-													echo "<div class='col-md-12'>";
+													echo "<div class=\"col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6\">";
 													echo "<div class='thumbnail'>";
 														echo "<a href=''>";
 															echo '<img src="data:image/jpeg;base64,'. $blobimg.'" class="img-rounded"
@@ -113,7 +112,6 @@
 															echo "<div class=\"caption card-footer\">";
 																echo "<ul class=\"list-inline\">";
 																	echo "<li>".$row['FavCount']."</li>";
-																	echo "<li ><button class=\"like\" type=\"button\" class=\"btn btn-white \"><i class=\"fa fa-heart-o fa-1x\"></i></button></li>";
 																	echo "<li class=\"suser\" style=\"text-decoration: underline;\">".$row['Genre']."</li>";
 																echo "</ul>";
 															echo "</div>";
