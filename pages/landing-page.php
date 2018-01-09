@@ -1,11 +1,13 @@
 <?php
 include "linkers/common-head.html";
+?>
 <script type="text/javascript" src="//platform.linkedin.com/in.js">
     api_key:   [API_KEY]
     onLoad:    [ONLOAD]
     authorize: [AUTHORIZE]
     lang:      [LANG_LOCALE]
 </script>
+<?php
 include "linkers/landing-page-css.html";
 include "linkers/header-css.html";
 ?>
