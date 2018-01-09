@@ -7,7 +7,7 @@
 <!-- Search Options -->
 <script type="text/javascript">
 	$(document).ready(function() {
-        $(".thumbnail").click(function () {;
+        $(".thumbnail").click(function () {
         	$('.like').on('click', function(e) {
 			   e.stopPropagation();
 			});	
@@ -18,7 +18,11 @@
 	            $("#muser").text($(this).data('todo').username);
 	            $("#mimg").attr("src",img);
         })
+        $("#uploadbutton").click(function (){
+    		window.location = "upload-page.php";
+    	});
     });
+
 </script>
 
 </head>
