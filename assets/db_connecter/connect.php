@@ -89,6 +89,14 @@ function favPosts($recidentifier){
 }
 
 /*Dua Custom Functions*/
+function postInserter($userid, $text, $title,$pic, $genre, $location){
+    
+        $sqlQuery = "INSERT INTO `posts` (`UID`,`Text`,`Title`,`Pic`,`Genre`,`Location`,`FavCount`) VALUES ('$userid', '$text', '$title','$pic', '$genre', '$location','0')";
+        mysql_query($sqlQuery) or die(mysql_error());
+        
+    }
+
+
 function supInserter($email,$pass,$dob,$gender){
 
     $sqlQuery = "INSERT INTO `user` (`Email`,`Pass`,`DOB`,`Gender`) VALUES ('$email','$pass','$dob','$gender')";

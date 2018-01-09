@@ -1,5 +1,7 @@
-<form id="contact" name="contact" method="post">  
-  <fieldset> 
+<?php 
+$blob = $_SESSION['uid'];
+?>
+<form enctype="multipart/form-data" action="upload-db.php" id="contact" name="contact" method="POST">  
   	<div class="col-sm-2">
   		<div class="form-group label-floating">
 			<label style="color: maroon;" class="control-label">Title</label>
@@ -21,11 +23,11 @@
 	<div class="col-sm-6">
   		<div class="form-group label-floating">
 			<label style="color: maroon;" class="control-label">Write Your Message here!</label>
-			<textarea class="form-control" id="sstory" rows="5" style="width: 645px;" required></textarea>
+			<textarea class="form-control" id="sstory" name="sstory" rows="5" style="width: 645px;" required></textarea>
 		</div>
 	</div>
+	<input type="text" name="zeblob" value="<?php echo $blob; ?>" style = "display: none;">
 	<input type="file" name="spic" id="spic" class="spic" required>
 	<label id="splabel"> Upload Your Image Here</label>
     <input id="ssubmit" type="submit" name="submit" value="Upload" style="float: right; background-color: #9e3b33; border-radius: 10px;color: white;" required> 
-  </fieldset>  
 </form>

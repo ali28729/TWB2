@@ -48,7 +48,6 @@
 					</div>
 					<br>
 					<center>
-					<div id="shareBtn" class="btn btn-success clearfix">Share</div>
 
 					</center>
 					<div class="row">
