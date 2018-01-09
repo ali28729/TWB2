@@ -1,6 +1,9 @@
 	<?php
 
 	//$id=$_SESSION['uid'];
+
+
+
 	$uid=$_SESSION['uid'];
 
 	$query = mysql_query("SELECT * FROM userprofile where ID='$uid'");
@@ -43,7 +46,11 @@
 	                <div class="description text-center">
                         <p><?php echo"$bio"; ?></p>
 					</div>
-					
+					<br>
+					<center>
+					<div id="shareBtn" class="btn btn-success clearfix">Share</div>
+
+					</center>
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3">
 							<div class="profile-tabs">
@@ -117,7 +124,10 @@
 															echo "</div>";
 
 													echo "</div>";
+
 													echo "</div>";
+
+
 												}
 												?>    
 				                            </div>
