@@ -1,7 +1,7 @@
 <?php 
 $blob = $_SESSION['uid'];
 ?>
-<form enctype="multipart/form-data" action="upload-db.php" id="contact" name="contact" method="POST">  
+<form enctype="multipart/form-data"  action="upload-db.php" id="contact" name="contact" method="POST">  
   	<div class="col-sm-2">
   		<div class="form-group label-floating">
 			<label style="color: maroon;" class="control-label">Title</label>
@@ -27,7 +27,7 @@ $blob = $_SESSION['uid'];
 		</div>
 	</div>
 	<input type="text" name="zeblob" value="<?php echo $blob; ?>" style = "display: none;">
-	<input type="file" name="spic" id="spic" class="spic" required>
+	<input type="file" name="spic" id="spic" required>
 	<label id="splabel"> Upload Your Image Here</label>
     <input id="ssubmit" type="submit" name="submit" value="Upload" style="float: right; background-color: #9e3b33; border-radius: 10px;color: white;" required> 
 </form>

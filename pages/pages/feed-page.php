@@ -5,12 +5,11 @@
 			<div class="row">
 		  	<?php
 				$query = mysql_query("SELECT * FROM posts");
-				$array = array();
 				while($row = mysql_fetch_assoc($query)){
 					$blobimg = base64_encode($row['Pic']);
 
 					echo "<div class=\"col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3\">";
-						echo "<div class=\"thumbnail\" data-toggle=\"modal\" data-target=\"#GSCCModal\"	data-todo='{\"title\":\"".$row['Title']."\",\"image\":\"$blobimg\",\"username\":\"".$row['Genre']."\",\"favcount\":\"".$row['FavCount']."\", \"story\":\"".$row['Text']."\"}'>";
+						echo "<div class='thumbnail' data-toggle='modal' data-target='#GSCCModal' data-todo='{\"title\":\"".$row['Title']."\",\"image\":\"$blobimg\",\"username\":\"".$row['Genre']."\",\"favcount\":\"".$row['FavCount']."\", \"story\":\"".$row['Text']."\"}'>";
 							echo '<img src="data:image/jpeg;base64,'. $blobimg.'"/>';
 							echo "<div class=\"caption\" class=\"storycaption\">";
 								echo "<h3 id=\"thumbnail-label\">".$row['Title']."</h3>";
